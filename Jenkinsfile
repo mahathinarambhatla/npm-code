@@ -8,6 +8,7 @@ pipeline
   {      
      stage('Build') {
        steps{
+        sh 'npm whoami'
         sh 'npm install'
         sh 'npm publish'
        }
