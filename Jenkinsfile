@@ -8,7 +8,7 @@ pipeline
   {      
      stage('Build') {
        steps{
-         sh 'whoami'
+         sh 'cp .npmrc /var/lib/jenkins'
          sh 'npm install'
         sh 'npm publish'
        }
