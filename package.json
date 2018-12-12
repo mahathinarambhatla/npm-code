@@ -25,5 +25,8 @@
   "contributors": [
     "Zeke Sikelianos <zeke@sikelianos.com> (http://zeke.sikelianos.com)"
   ],
+  "publishConfig": {
+    "registry": "http://35.231.84.239:8081/repository/npm-trial/"
+  }
   "license": "MIT"
 }
