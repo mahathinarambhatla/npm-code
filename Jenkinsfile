@@ -8,7 +8,7 @@ pipeline
   {      
      stage('Build') {
        steps{
-         sh 'cp .npmrc /var/lib/jenkins'
+         sh 'npm adduser --registry=http://35.231.84.239:8081' --always-auth
          sh 'npm install'
         sh 'npm publish'
        }
