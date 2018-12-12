@@ -10,9 +10,9 @@ pipeline
      {
       steps 
        {
-         npm install 
-         npm publish --registry http://35.231.84.239:8081/repository/npm-trial/
+         sh 'npm install'
+         sh 'npm publish --registry http://35.231.84.239:8081/repository/npm-trial/'
         }
        }
      }
-
+}
