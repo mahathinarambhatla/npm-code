@@ -8,12 +8,16 @@ pipeline
   {      
      stage('Build') {
        steps{
-        withCredentials([usernamePassword(credentialsId: 'nexus', passwordVariable: 'nexuspassword', usernameVariable: 'nexususer')]) {
+      sh '''  TOKEN=$(curl -s \
+         -H "Accept: application/json" \
+         -H "Content-Type:application/json" \
+        -X PUT --data '{"name": "admin", "password": "admin123"}' \
+        http://35.231.84.239:8081/-/user/org.couchdb.user:username_here 2>&1 | grep -Po \
+         '(?<="token": ")[^"]*')  '''
+         sh 'npm set registry http://35.231.84.239:8081/:_authToken $TOKEN
         sh 'npm install'
-        sh 'npm login --registry http://35.231.84.239:8081'
-        sh 'npm publish --registry http://35.231.84.239:8081/repository/npm-trial/'
+        sh 'npm publish'
        }
        }
      }
-  }
-}  
+} 
