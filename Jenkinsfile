@@ -8,7 +8,7 @@ pipeline
   {      
      stage('Build') {
        steps{
-         sh ' ~/.npmrc'
+         sh 'cp .npmrc /home/jenkins'
          sh 'npm install'
         sh 'npm publish'
        }
