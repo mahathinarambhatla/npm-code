@@ -27,6 +27,6 @@
   ],
   "publishConfig": {
     "registry": "http://35.231.84.239:8081/repository/npm-trial/"
-  }
+  },
   "license": "MIT"
 }
