@@ -6,16 +6,8 @@ pipeline
   {      
      stage('Build') {
        steps{
-        sh 'npm config set registry http://35.231.84.239:8081/repository/npm-trial'
-        sh ''' 
-        npm login << EOF
-        {
-          "Username": "jenkins",
-          "Password": "jenkins",
-          "Email": "jenkins@ca.com" } EOF
-         '''
-        sh 'npm install'
-        sh 'npm publish'
+        sh 'cp /root/.npmrc /var/lib/jenkins'
+         sh 'echo $NPM_TOKEN'
         }
        }
        }
