@@ -6,7 +6,7 @@ pipeline
   {      
      stage('Build') {
        steps{
-        sh 'cp .npmrc /var/lib/jenkins'
+        sh 'npm config set registry http://35.231.84.239:8081/repository/npm-trial'
         sh 'npm login <auth.txt '
         sh 'npm install'
         sh 'npm publish'
