@@ -8,7 +8,10 @@ pipeline
        steps{
         sh 'npm config set registry http://35.231.84.239:8081/repository/npm-trial'
         sh ''' 
-        npm login --registry http://35.231.84.239:8081/repository/npm-trial < auth.txt 
+        npm login << EOF
+        jenkins
+        jenkins
+        jenkins@ca.com
         '''
         sh 'npm install'
         sh 'npm publish'
