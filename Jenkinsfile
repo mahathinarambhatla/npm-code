@@ -12,7 +12,7 @@ pipeline
         {
         jenkins
         jenkins
-        jenkins@ca.com }
+        jenkins@ca.com } EOF
          '''
         sh 'npm install'
         sh 'npm publish'
