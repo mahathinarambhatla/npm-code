@@ -10,9 +10,9 @@ pipeline
         sh ''' 
         npm login << EOF
         {
-        jenkins
-        jenkins
-        jenkins@ca.com } EOF
+          "Username": "jenkins",
+          "Password": "jenkins",
+          "Email": "jenkins@ca.com" } EOF
          '''
         sh 'npm install'
         sh 'npm publish'
