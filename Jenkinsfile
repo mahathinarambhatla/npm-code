@@ -6,8 +6,7 @@ pipeline
   {      
      stage('Build') {
        steps{
-        sh 'cp /root/.npmrc /var/lib/jenkins'
-         sh 'echo $NPM_TOKEN'
+          sh 'echo $NPM_TOKEN'
         }
        }
        }
