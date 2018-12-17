@@ -11,7 +11,7 @@ pipeline
         steps {
             sh 'cp .npmrc /var/lib/jenkins'
             sh 'npm install'
-            sh 'npm publish
+            sh 'npm publish'
             }
     }
     stage('Maven Build') {
