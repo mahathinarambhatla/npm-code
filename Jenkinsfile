@@ -3,7 +3,7 @@ pipeline
   agent any
   tools {
     nodejs "node"
-    maven 'apache-maven-3.3.9' }
+     }
  stages 
   {      
     stage('NPM Build') {
